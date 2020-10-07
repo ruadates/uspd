@@ -5,8 +5,6 @@ $handle = fopen("counter.txt", "r");
 		fclose ($handle) ; 
 		$counter++ ;
 		$handle = fopen("counter.txt", "w" ) ; 
-		fwrite($handle,$counter) ; 
-		fclose ($handle); 
 		echo $counter;
 		} 
 ?>
