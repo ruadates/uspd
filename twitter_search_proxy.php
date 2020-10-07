@@ -3,28 +3,7 @@
 
 class TwitterProxy {
 
-	/**
-	 * The tokens, keys and secrets from the app you created at https://dev.twitter.com/apps
-	 */
-	private $config = [
-		'use_whitelist' => true, // If you want to only allow some requests to use this script.
-		'base_url' => 'https://api.twitter.com/1.1/'
-	];
 	
-	/**
-	 * Only allow certain requests to twitter. Stop randoms using your server as a proxy.
-	 */
-	private $whitelist = [];
-
-	/**
-	 *	@param	string	$oauth_access_token			OAuth Access Token			('Access token' on https://apps.twitter.com)
-	 *	@param	string	$oauth_access_token_secret	OAuth Access Token Secret	('Access token secret' on https://apps.twitter.com)
-	 *	@param	string	$consumer_key				Consumer key				('API key' on https://apps.twitter.com)
-	 *	@param	string	$consumer_secret			Consumer secret				('API secret' on https://apps.twitter.com)
-	 *	@param	string	$user_id					User id (http://gettwitterid.com/)
-	 *	@param	string	$screen_name				Twitter handle
-	 *	@param	string	$count						The number of tweets to pull out
-	 */
 	public function __construct($oauth_access_token, $oauth_access_token_secret, $consumer_key, $consumer_secret, $search, $type, $count = 5) {
 
 		$this->config = array_merge($this->config, compact('oauth_access_token', 'oauth_access_token_secret', 'consumer_key', 'consumer_secret', 'search', 'type', 'count'));
