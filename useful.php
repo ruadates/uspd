@@ -7,11 +7,11 @@ function get_youtubeid($url)
 		if(!empty($parse['query'])) {
 		  preg_match("/v=([^&]+)/i", $url, $matches);
 		  return $matches[1];
-		} else {
-		  //to get basename
-		  $info = pathinfo($url);
-		  return $info['basename'];
-		}
+		} 
+		
+		
+		 
+		
 }
 
 ?>
